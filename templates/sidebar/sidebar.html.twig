@@ -1,0 +1,32 @@
+<section class="section">
+    <header>
+        <h3>{{ 'sidebar.announcements'|trans }}</h3>
+    </header>
+    <p class="announcements">
+        {% if is_granted('ROLE_ADMIN') -%}
+            <a href="#announcement" style="color:#337ab7">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> {{ 'sidebar.add'|trans }}
+            </a>
+        {% endif %}
+    </p>
+</section>
+
+<section class="section">
+    <header>
+        <h3>{{ 'sidebar.comments'|trans }}</h3>
+    </header>
+    {% if comments is empty %}
+        <h2>{{ 'comments.none'|trans }}</h2>
+    {% endif %}
+    {% for comment in comments %}
+        <p>
+            {% set day =  comment.created|date('l') %}
+            {% set month = comment.created|date('F') %}
+
+            <time datetime="{{comment.created|date('c')|trans }}">{{ day|trans }}, {{ month|trans }} {{  comment.created|date('j, Y, G:i:s')}}</time>
+            {{ comment.author }}
+            <br>
+            {{ comment.comment }}
+        </p>
+    {% endfor %}
+</section>

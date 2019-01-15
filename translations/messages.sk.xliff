@@ -1,0 +1,410 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="sk" datatype="plaintext" original="file.ext">
+        <body>
+  
+<!--|| SITE ||-->   
+            <trans-unit id="_site.title">           
+                <source>site.title</source>
+                <target>ADes Blog</target>
+            </trans-unit>
+            <trans-unit id="_site.tagline">            
+                <source>site.tagline</source>
+                <target>FIIT</target>
+            </trans-unit>
+            <trans-unit id="_site.name">           
+                <source>site.name</source>
+                <target>Učím sa</target>
+            </trans-unit>
+  
+<!--|| NAV ||-->
+            <trans-unit id="_nav.home">
+                <source>nav.home</source>
+                <target>Domov</target>
+            </trans-unit>
+            <trans-unit id="_nav.about">
+                <source>nav.about</source>
+                <target>O mne</target>
+            </trans-unit>
+            <trans-unit id="_nav.contact">
+                <source>nav.contact</source>
+                <target>Kontakt</target>
+            </trans-unit>
+             <trans-unit id="_nav.search">
+                <source>nav.search</source>
+                <target>Vyhľadávanie</target>
+            </trans-unit>
+            <trans-unit id="_nav.add">
+                <source>nav.add</source>
+                <target>Pridať príspevok</target>
+            </trans-unit>
+            <trans-unit id="_nav.my">
+                <source>nav.my</source>
+                <target>Moje príspevky</target>
+            </trans-unit>
+            <trans-unit id="_nav.game">
+                <source>nav.game</source>
+                <target>Hra</target>
+            </trans-unit>
+
+<!--|| SEARCH ||-->
+            <trans-unit id="_search.input">
+                <source>search.input</source>
+                <target>Zadajte dotaz</target>
+            </trans-unit>
+            <trans-unit id="_search.notfound">
+                <source>search.notfound</source>
+                <target>Neboli nájdené žiadne príspevky</target>
+            </trans-unit>
+
+<!--|| BLOG ||-->
+            <trans-unit id="_blog.send">
+                <source>blog.send</source>
+                <target>Uložiť</target>
+            </trans-unit>
+            <trans-unit id="_blog.delete">
+                <source>blog.delete</source>
+                <target>Vymazať príspevok</target>
+            </trans-unit>
+            <trans-unit id="_blog.edit">
+                <source>blog.edit</source>
+                <target>Editovať príspevok</target>
+            </trans-unit>
+            <trans-unit id="_blog.edit.title">
+                <source>blog.edit.title</source>
+                <target>Editovať</target>
+            </trans-unit>
+            <trans-unit id="_blog.readmore">
+                <source>blog.readmore</source>
+                <target>Čítať viac</target>
+            </trans-unit>
+            <trans-unit id="_blog.title">
+                <source>blog.title</source>
+                <target>Sem zadajte nadpis vášho príspevku</target>
+            </trans-unit>
+            <trans-unit id="_blog.body">
+                <source>blog.body</source>
+                <target>Sem zadajte váš príspevok</target>
+            </trans-unit>
+            <trans-unit id="_blog.tags">
+                <source>blog.tags</source>
+                <target>Sem zadajte tagy vášho príspevku</target>
+            </trans-unit>
+            <trans-unit id="_blog.none">
+                <source>blog.none</source>
+                <target>Zatiaľ žiadne príspevky</target>
+            </trans-unit>
+
+<!--|| COMMENT ||-->
+            <trans-unit id="_comment.send">
+                <source>comment.send</source>
+                <target>Komentovať</target>
+            </trans-unit>
+            <trans-unit id="_comment.add">
+                <source>comment.add</source>
+                <target>Pridajte komentár</target>
+            </trans-unit>
+            <trans-unit id="_comment.enter">
+                <source>comment.enter</source>
+                <target>Sem napíšte komentár</target>
+            </trans-unit>
+            <trans-unit id="_comment.none">
+                <source>comment.none</source>
+                <target>Žiadne nedávne komentáre</target>
+            </trans-unit>
+            <trans-unit id="_comment.login">
+                <source>comment.login</source>
+                <target>Pre pridanie komentáru musíte byť registrovaný!</target>
+            </trans-unit>
+
+<!--|| SIDEBAR ||-->
+            <trans-unit id="_sidebar.announcements">
+                <source>sidebar.announcements</source>
+                <target>Oznámenia</target>
+            </trans-unit>
+            <trans-unit id="_sidebar.comments">
+                <source>sidebar.comments</source>
+                <target>Komenty</target>
+            </trans-unit>
+            <trans-unit id="_sidebar.add">
+                <source>sidebar.add</source>
+                <target>Pridať oznámenie</target>
+            </trans-unit>
+
+<!--|| ADD BLOG ||-->
+            <trans-unit id="_add.title">
+                <source>add.title</source>
+                <target>Zadajte titulok</target>
+            </trans-unit>
+            <trans-unit id="_add.body">
+                <source>add.body</source>
+                <target>Napíšte príspevok</target>
+            </trans-unit>
+            <trans-unit id="_add.send">
+                <source>add.send</source>
+                <target>Odoslať príspevok</target>
+            </trans-unit>
+ 
+<!--|| LOCALE ||-->
+            <trans-unit id="_locale.english">            
+                <source>locale.english</source>
+                <target>English</target>
+            </trans-unit>
+            <trans-unit id="_locale.slovak">
+                <source>locale.slovak</source>
+                <target>Slovensky</target>
+            </trans-unit>
+  
+<!--|| FOOTER ||-->
+            <trans-unit id="_footer.copy">            
+                <source>footer.copy</source>
+                <target>Fooooooooter</target>
+            </trans-unit>
+            <trans-unit id="_footer.mail.username">            
+                <source>footer.mail.username</source>
+                <target>adam.benovic</target>
+            </trans-unit>
+            <trans-unit id="_footer.mail.domain">            
+                <source>footer.mail.domain</source>
+                <target>bootiq.io</target>
+            </trans-unit>
+            <trans-unit id="_footer.mail.title">            
+                <source>footer.mail.title</source>
+                <target>ADes</target>
+            </trans-unit>
+  
+<!--|| LEGAL ||-->
+            <trans-unit id="_legal.terms">            
+                <source>legal.terms</source>
+                <target>Právne informácie</target>
+            </trans-unit>
+            <trans-unit id="_legal.disclaimer">            
+                <source>legal.disclaimer</source>
+                <target>Hahahaha</target>
+            </trans-unit> 
+            <trans-unit id="_legal.privacy">            
+                <source>legal.privacy</source>
+                <target>Súkromie</target>
+            </trans-unit> 
+            <trans-unit id="_legal.trademarks">            
+                <source>legal.trademarks</source>
+                <target>Tutututururururu</target>
+            </trans-unit>
+            <trans-unit id="_legal.imprint">            
+                <source>legal.imprint</source>
+                <target>Legal</target>
+            </trans-unit>
+  
+<!--|| FORM ||-->
+            <trans-unit id="_form.name">            
+                <source>Name</source>
+                <target>Meno</target>
+            </trans-unit>
+            <trans-unit id="_form.email">            
+                <source>Email</source>
+                <target>Email</target>
+            </trans-unit>
+            <trans-unit id="_form.subject">            
+                <source>Subject</source>
+                <target>Predmet</target>
+            </trans-unit>     
+            <trans-unit id="_form.body">            
+                <source>Body</source>
+                <target>Telo</target>
+            </trans-unit>
+            <trans-unit id="_form.success">
+                <source>form.success</source>
+                <target>Vaša správa bola úspešne odoslaná. Ďakujem!</target>
+            </trans-unit>
+
+   
+<!--|| GENERIC ||-->
+            <trans-unit id="_generic.user">
+                <source>User</source>
+                <target>Užívateľ</target>
+            </trans-unit>
+            <trans-unit id="_gerneric.comment">
+                <source>Comment</source>
+                <target>Koment</target>
+            </trans-unit>
+            <trans-unit id="_gerneric.captcha">
+                <source>Captcha</source>
+                <target>Captcha</target>
+            </trans-unit>
+            <trans-unit id="_username">
+                <source>Username</source>
+                <target>Užívateľské meno</target>
+            </trans-unit>
+            <trans-unit id="_username.canonical">
+                <source>Username canonical</source>
+                <target>Užívateľské meno canonical</target>
+            </trans-unit>
+            <trans-unit id="_email.canonical">
+                <source>Email canonical</source>
+                <target>Email canonical</target>
+            </trans-unit>
+            <trans-unit id="_enabled">
+                <source>Enabled</source>
+                <target>Aktívny</target>
+            </trans-unit>
+            <trans-unit id="_salt">
+                <source>Salt</source>
+                <target>Soľ</target>
+            </trans-unit>
+            <trans-unit id="_password">
+                <source>Password</source>
+                <target>Heslo</target>
+            </trans-unit>
+            <trans-unit id="_last.login">
+                <source>Last login</source>
+                <target>Posledné prihlásenie</target>
+            </trans-unit>
+            <trans-unit id="_confirmation.token">
+                <source>Confirmation token</source>
+                <target>Potvrdzujúci token</target>
+            </trans-unit>
+            <trans-unit id="_password.requested.at">
+                <source>Password requested at</source>
+                <target>Zmena hesla vyžiadaná na</target>
+            </trans-unit>
+            <trans-unit id="_roles">
+                <source>Roles</source>
+                <target>Role</target>
+             </trans-unit>
+            <trans-unit id="_0">
+                <source>0</source>
+                <target>0</target>
+            </trans-unit>
+
+<!--|| ADMIN ||-->
+            <trans-unit id="_role.admin">
+                <source>role.admin</source>
+                <target>Administrátor</target>
+            </trans-unit>
+            <trans-unit id="_admin.panel">
+                <source>admin.panel</source>
+                <target>Administrátorské nastavenia</target>
+            </trans-unit>
+
+<!--|| LOGIN (FOSU) ||-->
+            <trans-unit id="_security.login.username">
+              <source>security.login.username</source>
+              <target>Používateľské meno</target>
+            </trans-unit>
+            <trans-unit id="_security.login.password">
+              <source>security.login.password</source>
+              <target>Heslo</target>
+            </trans-unit>
+            <trans-unit id="_security.login.remember_me">
+              <source>security.login.remember_me</source>
+              <target>Pamätať si ma</target>
+            </trans-unit>
+            <trans-unit id="_login.login">
+              <source>login.login</source>
+              <target>Prihlásenie</target>
+            </trans-unit>
+            <trans-unit id="_login.logout">
+              <source>login.logout</source>
+              <target>Odhlásiť</target>
+            </trans-unit>
+            <trans-unit id="_login.register">
+              <source>login.register</source>
+              <target>Registrovať</target>
+            </trans-unit>
+            <trans-unit id="_login.title">
+              <source>login.title</source>
+              <target>Prihlásiť sa</target>
+            </trans-unit>
+            <trans-unit id="_login.register.title">
+              <source>login.register.title</source>
+              <target>Registrovať nový účet</target>
+            </trans-unit>
+            <trans-unit id="_login.forgot.password">
+              <source>login.forgot.password</source>
+              <target>Zabudnuté heslo</target>
+            </trans-unit>
+            <trans-unit id="_login.submit">
+              <source>login.submit</source>
+              <target>Prihlásiť</target>
+            </trans-unit>
+
+<!--|| DATE ||-->
+            <trans-unit id="_day.monday">
+              <source>Monday</source>
+              <target>Pondelok</target>
+            </trans-unit>
+            <trans-unit id="_day.tuesday">
+              <source>Tuesday</source>
+              <target>Utorok</target>
+            </trans-unit>
+            <trans-unit id="_day.wednesday">
+              <source>Wednesday</source>
+              <target>Streda</target>
+            </trans-unit>
+            <trans-unit id="_day.thursday">
+              <source>Thrusday</source>
+              <target>Štvrtok</target>
+            </trans-unit>
+            <trans-unit id="_day.friday">
+              <source>Friday</source>
+              <target>Piatok</target>
+            </trans-unit>
+            <trans-unit id="_day.saturday">
+              <source>Saturday</source>
+              <target>Sobota</target>
+            </trans-unit>
+            <trans-unit id="_day.sunday">
+              <source>Sunday</source>
+              <target>Nedeľa</target>
+            </trans-unit>
+            <trans-unit id="_month.january">
+              <source>January</source>
+              <target>Január</target>
+            </trans-unit>
+            <trans-unit id="_month.february">
+              <source>February</source>
+              <target>Február</target>
+            </trans-unit>
+            <trans-unit id="_month.march">
+              <source>March</source>
+              <target>Marec</target>
+            </trans-unit>
+            <trans-unit id="_month.april">
+              <source>April</source>
+              <target>Apríl</target>
+            </trans-unit>
+            <trans-unit id="_month.may">
+              <source>May</source>
+              <target>Máj</target>
+            </trans-unit>
+            <trans-unit id="_month.jun">
+              <source>Jun</source>
+              <target>Jún</target>
+            </trans-unit>
+            <trans-unit id="_month.july">
+              <source>July</source>
+              <target>Júl</target>
+            </trans-unit>
+            <trans-unit id="_month.august">
+              <source>August</source>
+              <target>August</target>
+            </trans-unit>
+            <trans-unit id="_month.september">
+              <source>September</source>
+              <target>September</target>
+            </trans-unit>
+            <trans-unit id="_month.october">
+              <source>October</source>
+              <target>Október</target>
+            </trans-unit>
+            <trans-unit id="_month.november">
+              <source>November</source>
+              <target>November</target>
+            </trans-unit>
+            <trans-unit id="_month.december">
+              <source>December</source>
+              <target>December</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

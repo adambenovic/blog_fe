@@ -1,0 +1,6 @@
+Name: {{ enquiry.name }}
+Time: {{ "now" | date("d.m.Y H:i:s") }}
+Reply-To: {{ enquiry.email }}
+Subject: {{ enquiry.subject }}
+Message:
+{{ enquiry.body }}

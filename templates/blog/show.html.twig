@@ -1,0 +1,52 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ blog.title|striptags }}{% endblock %}
+
+{% block body %}
+    <article class="blog">
+        <header>
+            <div class="date">
+                {% set day =  blog.created|date('l') %}
+                {% set month =  blog.created|date('F') %}
+
+                <time datetime="{{ blog.created|date('c') }}">{{ day|trans }}, {{ month|trans }} {{ blog.created|date('j, Y') }}</time>
+            </div>
+            {{ blog.title|raw }}
+        </header>
+        <span id="blogbody">
+            {{ blog.blog|raw}}
+        </span>
+        <hr>
+        <span id="blogtags">
+        Tags: {{ blog.tags|raw }}
+        </span>
+    </article>
+    <hr>
+    <div class="comment">
+        {% if comments is empty %}
+            <h1>{{ 'comment.none'|trans }}</h1>
+        {% endif %}
+        {% for comment in comments %}
+
+            {% set day =  comment.created|date('l') %}
+            {% set month = comment.created|date('F') %}
+
+            <time datetime="{{comment.created|date('c')|trans }}">{{ day|trans }}, {{ month|trans }} {{  comment.created|date('j, Y, G:i:s')}}</time>
+            <h3>{{ comment.author|striptags }}</h3>
+            <p>
+                {{ comment.comment|striptags }}
+            </p>
+            <hr>
+        {% endfor %}
+    </div>
+
+    <hr>
+
+    <form action="{{ path('showblog', {'id': id}) }}" method="POST" class="send">
+        <h3>{{ 'comment.add'|trans }}</h3>
+        {{ form_widget (form.comment, {'attr':{'placeholder':'comment.enter'|trans}}) }}
+        <br>
+        {{ form_rest(form) }}
+        <input type="submit" class="send" value="{{ 'comment.send'|trans }}"/>
+    </form>
+{% endblock %}

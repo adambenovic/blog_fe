@@ -1,0 +1,96 @@
+site.title: 'ADes Blog'
+site.tagline: FIIT
+site.name: 'Učím sa'
+nav.home: Domov
+nav.about: 'O mne'
+nav.contact: Kontakt
+nav.search: Vyhľadávanie
+locale.english: English
+locale.slovak: Slovensky
+footer.copy: Fooooooooter
+footer.mail.username: adam.benovic
+footer.mail.domain: bootiq.io
+footer.mail.title: ADes
+legal.terms: 'Právne informácie'
+legal.disclaimer: Hahahaha
+legal.privacy: Súkromie
+legal.trademarks: Tutututururururu
+legal.imprint: Legal
+Name: Meno
+Email: Email
+Subject: Predmet
+Body: Telo
+User: Užívateľ
+Comment: Koment
+Captcha: Captcha
+nav.add: 'Pridať príspevok'
+login.login: Prihlásenie
+login.logout: Odhlásiť
+login.register: Registrovať
+login.title: 'Prihlásiť sa'
+login.register.title: 'Registrovať nový účet'
+login.forgot.password: 'Zabudnuté heslo'
+login.submit: Prihlásiť
+admin.panel: 'Administrátorské nastavenia'
+add.title: 'Zadajte titulok'
+add.body: 'Napíšte príspevok'
+add.send: 'Odoslať príspevok'
+nav.my: 'Moje príspevky'
+blog.send: Uložiť
+blog.delete: 'Vymazať príspevok'
+blog.edit: 'Editovať príspevok'
+blog.edit.title: Editovať
+sidebar.announcements: Oznámenia
+sidebar.comments: Komenty
+Username: 'Užívateľské meno'
+'Username canonical': 'Užívateľské meno canonical'
+'Email canonical': 'Email canonical'
+Enabled: Aktívny
+Salt: Soľ
+Password: Heslo
+'Last login': 'Posledné prihlásenie'
+'Confirmation token': 'Potvrdzujúci token'
+'Password requested at': 'Zmena hesla vyžiadaná na'
+Roles: Role
+0: '0'
+role.admin: Administrátor
+blog.none: 'Zatiaľ žiadne príspevky'
+comment.add: 'Pridajte komentár'
+comment.send: Komentovať
+search.input: 'Zadajte dotaz'
+search.notfound: 'Neboli nájdené žiadne príspevky'
+home.readmore: 'Čítať viac'
+sidebar.add: 'Pridať oznámenie'
+comment.enter: 'Sem napíšte komentár'
+blgo.title: __blgo.title
+blog.readmore: 'Čítať viac'
+blog.title: 'Sem zadajte nadpis vášho príspevku'
+blog.body: 'Sem zadajte váš príspevok'
+blog.tags: 'Sem zadajte tagy vášho príspevku'
+comment.none: 'Žiadne nedávne komentáre'
+comments.none: __comments.none
+Monday: Pondelok
+Tuesday: Utorok
+January: Január
+December: December
+Wednesday: Streda
+Thrusday: Štvrtok
+Friday: Piatok
+Saturday: Sobota
+Sunday: Nedeľa
+February: Február
+March: Marec
+April: Apríl
+May: Máj
+Jun: Jún
+July: Júl
+August: August
+September: September
+October: Október
+November: November
+security.login.username: 'Používateľské meno'
+security.login.password: Heslo
+security.login.remember_me: 'Pamätať si ma'
+comment.login: 'Pre pridanie komentáru musíte byť registrovaný!'
+_form.success: 'Vaša správa bola úspešne odoslaná. Ďakujem!'
+form.success: 'Vaša správa bola úspešne odoslaná. Ďakujem!'
