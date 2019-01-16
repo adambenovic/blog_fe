@@ -20,13 +20,13 @@
     {% endif %}
     {% for comment in comments %}
         <p>
-            {% set day =  comment.created|date('l') %}
-            {% set month = comment.created|date('F') %}
+            {% set day =  comment.created.date|date('l') %}
+            {% set month = comment.created.date|date('F') %}
 
-            <time datetime="{{comment.created|date('c')|trans }}">{{ day|trans }}, {{ month|trans }} {{  comment.created|date('j, Y, G:i:s')}}</time>
+            <time datetime="{{comment.created.date|date('c')|trans }}">{{ day|trans }}, {{ month|trans }} {{  comment.created.date|date('j, Y, G:i:s')}}</time>
             {{ comment.author }}
             <br>
-            {{ comment.comment }}
+            {{ comment.body }}
         </p>
     {% endfor %}
 </section>

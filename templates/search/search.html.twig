@@ -8,14 +8,14 @@
     {% for blog in blogs %}
         <article class="blog">
             <header>
-                <div class="date"><time datetime="{{ blog.created|date('c') }}">{{ blog.created|date('l, F j, Y') }}</time></div>
+                <div class="date"><time datetime="{{ blog.created.date|date('c') }}">{{ blog.created.date|date('l, F j, Y') }}</time></div>
                 <h2>
                     <a href="/{{ blog.id }}">{{ blog.title|striptags }}</a>
                 </h2>
             </header>
             <div>
                 <p>
-                    {{ blog.blog|striptags|slice(0, 50) ~ "..." }}
+                    {{ blog.body|striptags|slice(0, 50) ~ "..." }}
                     <a href="{{ blog.id }}">{{ 'home.readmore'|trans }}</a>
                 </p>
             </div>

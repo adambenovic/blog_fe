@@ -8,10 +8,10 @@
         <article class="blog">
             <header>
                 <div class="date">
-                    {% set day =  blog.created|date('l') %}
-                    {% set month =  blog.created|date('F') %}
+                    {% set day =  blog.created.date|date('l') %}
+                    {% set month =  blog.created.date|date('F') %}
 
-                    <time datetime="{{ blog.created|date('c') }}">{{ day|trans }}, {{ month|trans }} {{ blog.created|date('j, Y') }}</time>
+                    <time datetime="{{ blog.created.date|date('c') }}">{{ day|trans }}, {{ month|trans }} {{ blog.created.date|date('j, Y') }}</time>
                 </div>
                 <h2>
                     <a href="/{{ blog.id }}">{{ blog.title|striptags }}</a>
@@ -19,7 +19,7 @@
             </header>
             <div>
                 <p>
-                    {{ blog.blog|striptags|slice(0, 50) ~ "..." }}
+                    {{ blog.body|striptags|slice(0, 50) ~ "..." }}
                     <a href="{{ blog.id }}">{{ 'blog.readmore'|trans }}</a>
                 </p>
             </div>

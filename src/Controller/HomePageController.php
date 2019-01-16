@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
+use App\Handler\CommentsHandler;
 use App\Handler\ContactFormHandler;
-use App\Service\DatabaseService;
+use App\Handler\PostsHandler;
+use App\Service\ApiClient;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -11,20 +13,27 @@ use Symfony\Component\HttpFoundation\Request;
 class HomePageController extends Controller
 {
     private $contactHandler;
+    private $postsHandler;
+    private $commentsHandler;
 
     public function __construct(
-        ContactFormHandler $contactHandler
+        ContactFormHandler $contactHandler,
+        PostsHandler $postsHandler,
+        CommentsHandler $commentsHandler
+
     ){
         $this->contactHandler = $contactHandler;
+        $this->postsHandler = $postsHandler;
+        $this->commentsHandler = $commentsHandler;
     }
 
     /**
      * @Route("/", name="homepage")
-     * @return mixed rendered page
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function index()
     {
-        $blogs = $this->dbService->loadHomepagePosts();
+        $blogs = $this->postsHandler->getHomepagePosts();
 
         return $this->render('homepage/index.html.twig', [
             'blogs' => $blogs
@@ -63,7 +72,7 @@ class HomePageController extends Controller
      * @return mixed rendered page
      */
     public function search(Request $request) {
-        $blogs = $this->dbService->loadSearchPosts($request);
+        $blogs = $this->postsHandler->getSearchPosts($request);
 
         return $this->render('search/search.html.twig', array(
             'blogs' => $blogs
@@ -76,7 +85,7 @@ class HomePageController extends Controller
      */
     public function sidebar()
     {
-        $comments = $this->dbService->loadSidebarComments();
+        $comments = $this->commentsHandler->getHomepageComments();
 
         return $this->render('sidebar/sidebar.html.twig', array(
             'comments' => $comments
