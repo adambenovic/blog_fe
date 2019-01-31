@@ -14,37 +14,33 @@ class CommentFormHandler
 {
     private $formFactory;
     private $flashBag;
-    private $commentRepo;
     private $factory;
+    private $commentsHandler;
 
     public function __construct(
         FormFactoryInterface $formFactory,
         FlashBagInterface $flashBag,
-        CommentRepository $commentRepo,
-        EntityFactory $factory
+        EntityFactory $factory,
+        CommentsHandler $commentsHandler
     ){
         $this->formFactory = $formFactory;
         $this->flashBag = $flashBag;
-        $this->commentRepo = $commentRepo;
         $this->factory = $factory;
+        $this->commentsHandler = $commentsHandler;
     }
 
-    public function handle(Request $request, Blog $blog)
+    public function handle(Request $request, int $id)
     {
-        $comment = $this->factory->createComment($blog);
+        $comment = $this->factory->createComment();
         $form = $this->formFactory->create(CommentType::class, $comment);
 
         if ($request->getMethod() == 'POST') {
             $form->handleRequest($request);
 
             if ($form->isValid()) {
-                if($comment->getAuthor() === null)
-                {
+                $response = $this->commentsHandler->postComment($comment, $id);
+                if($response == null)
                     $this->flashBag->add('error', 'comment.login');
-                    return null;
-                }
-
-                $this->commentRepo->saveWpersist($comment);
 
                 return null;
             }

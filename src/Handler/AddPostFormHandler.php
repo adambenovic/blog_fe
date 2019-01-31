@@ -16,11 +16,9 @@ class AddPostFormHandler
 
     public function __construct(
         FormFactoryInterface $formFactory,
-        BlogRepository $blogRepo,
         EntityFactory $factory
     ){
         $this->formFactory = $formFactory;
-        $this->blogRepo = $blogRepo;
         $this->factory = $factory;
     }
 

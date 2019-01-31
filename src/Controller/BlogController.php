@@ -4,7 +4,9 @@ namespace App\Controller;
 
 use App\Handler\AddPostFormHandler;
 use App\Handler\CommentFormHandler;
+use App\Handler\CommentsHandler;
 use App\Handler\EditPostFormHandler;
+use App\Handler\PostsHandler;
 use App\Service\DatabaseService;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
@@ -12,18 +14,24 @@ use Symfony\Component\HttpFoundation\Request;
 
 class BlogController extends Controller
 {
-    private $commentHandler;
+    private $commentFormHandler;
     private $addPostHandler;
     private $editPostHandler;
+    private $postsHandler;
+    private $commentsHandler;
 
     public function __construct(
-        CommentFormHandler $commentHandler,
+        CommentFormHandler $commentFormHandler,
         AddPostFormHandler $addPostHandler,
-        EditPostFormHandler $editPostHandler
+        EditPostFormHandler $editPostHandler,
+        PostsHandler $postsHandler,
+        CommentsHandler $commentsHandler
     ){
-        $this->commentHandler = $commentHandler;
+        $this->commentFormHandler = $commentFormHandler;
         $this->addPostHandler = $addPostHandler;
         $this->editPostHandler = $editPostHandler;
+        $this->postsHandler = $postsHandler;
+        $this->commentsHandler = $commentsHandler;
     }
 
     /**
@@ -34,12 +42,12 @@ class BlogController extends Controller
      */
     public function show(Request $request, int $id)
     {
-        $blog = $this->dbService->loadShowPost($id);
-        $comments = $this->dbService->loadShowComments($id);
-        $form = $this->commentHandler->handle($request, $blog);
+        $blog = $this->postsHandler->getPostByID($id);
+        $comments = $this->commentsHandler->getBlogComments($id);
+        $form = $this->commentFormHandler->handle($request, $id);
 
         if ($form == null)
-            return $this->redirect($this->generateUrl('showblog', ['pageid' => $id]));
+            return $this->redirect($this->generateUrl('showblog', ['id' => $id]));
 
         return $this->render('blog/show.html.twig', [
             'id' => $id,

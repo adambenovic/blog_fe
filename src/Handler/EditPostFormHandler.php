@@ -11,12 +11,10 @@ use Symfony\Component\HttpFoundation\Request;
 class EditPostFormHandler
 {
     private $formFactory;
-    private $blogRepo;
 
-    public function __construct(FormFactoryInterface $formFactory, BlogRepository $blogRepo)
+    public function __construct(FormFactoryInterface $formFactory)
     {
         $this->formFactory = $formFactory;
-        $this->blogRepo = $blogRepo;
     }
 
     public function handle(Request $request, Blog $blog)

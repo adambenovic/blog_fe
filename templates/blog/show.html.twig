@@ -6,15 +6,15 @@
     <article class="blog">
         <header>
             <div class="date">
-                {% set day =  blog.created|date('l') %}
-                {% set month =  blog.created|date('F') %}
+                {% set day =  blog.created.date|date('l') %}
+                {% set month =  blog.created.date|date('F') %}
 
-                <time datetime="{{ blog.created|date('c') }}">{{ day|trans }}, {{ month|trans }} {{ blog.created|date('j, Y') }}</time>
+                <time datetime="{{ blog.created.date|date('c') }}">{{ day|trans }}, {{ month|trans }} {{ blog.created.date|date('j, Y') }}</time>
             </div>
             {{ blog.title|raw }}
         </header>
         <span id="blogbody">
-            {{ blog.blog|raw}}
+            {{ blog.body|raw}}
         </span>
         <hr>
         <span id="blogtags">
@@ -28,13 +28,13 @@
         {% endif %}
         {% for comment in comments %}
 
-            {% set day =  comment.created|date('l') %}
-            {% set month = comment.created|date('F') %}
+            {% set day =  comment.created.date|date('l') %}
+            {% set month = comment.created.date|date('F') %}
 
-            <time datetime="{{comment.created|date('c')|trans }}">{{ day|trans }}, {{ month|trans }} {{  comment.created|date('j, Y, G:i:s')}}</time>
+            <time datetime="{{comment.created.date|date('c')|trans }}">{{ day|trans }}, {{ month|trans }} {{  comment.created.date|date('j, Y, G:i:s')}}</time>
             <h3>{{ comment.author|striptags }}</h3>
             <p>
-                {{ comment.comment|striptags }}
+                {{ comment.body|striptags }}
             </p>
             <hr>
         {% endfor %}

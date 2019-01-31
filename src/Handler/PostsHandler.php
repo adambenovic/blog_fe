@@ -34,4 +34,10 @@ class PostsHandler
         return $blogs;
     }
 
+    public  function getPostByID(int $id)
+    {
+        $blog = $this->api->get('posts/' . $id);
+
+        return $blog;
+    }
 }

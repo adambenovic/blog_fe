@@ -27,23 +27,13 @@ class EntityFactory
         return $blog;
     }
 
-    /**
-     * @param Blog $blog The post that is the comment associated to
-     * @return Comment new Comment object
-     */
-    public function createComment(Blog $blog): Comment
+    public function createComment(): Comment
     {
-        $comment = new Comment();
-        $comment->setBlog($blog);
-        $user = $this->security->getUser();
-        if(null != $user)
-            $comment->setAuthor($user);
-
-        return $comment;
+        return new Comment();
     }
 
     /**
-     * @return Contact new Cotact object
+     * @return Contact new Contact object
      */
     public function createContact(): Contact
     {
