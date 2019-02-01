@@ -29,7 +29,7 @@ class CommentFormHandler
         $this->commentsHandler = $commentsHandler;
     }
 
-    public function handle(Request $request, int $id)
+    public function handle(Request $request, int $blogid)
     {
         $comment = $this->factory->createComment();
         $form = $this->formFactory->create(CommentType::class, $comment);
@@ -38,7 +38,7 @@ class CommentFormHandler
             $form->handleRequest($request);
 
             if ($form->isValid()) {
-                $response = $this->commentsHandler->postComment($comment, $id);
+                $response = $this->commentsHandler->postComment($comment, $blogid);
                 if($response == null)
                     $this->flashBag->add('error', 'comment.login');
 

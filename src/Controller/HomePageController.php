@@ -2,11 +2,10 @@
 
 namespace App\Controller;
 
+use Symfony\Component\Routing\Annotation\Route;
 use App\Handler\CommentsHandler;
 use App\Handler\ContactFormHandler;
 use App\Handler\PostsHandler;
-use App\Service\ApiClient;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -31,7 +30,7 @@ class HomePageController extends Controller
      * @Route("/", name="homepage")
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function index()
+    public function homepage()
     {
         $blogs = $this->postsHandler->getHomepagePosts();
 

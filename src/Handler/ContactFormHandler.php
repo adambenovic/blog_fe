@@ -2,7 +2,6 @@
 
 namespace App\Handler;
 
-use App\Decorator\ContactDecorator;
 use App\Factory\EntityFactory;
 use App\Form\ContactType;
 use Symfony\Component\Form\FormFactoryInterface;
@@ -14,20 +13,17 @@ class ContactFormHandler
     private $formFactory;
     private $flashBag;
     private $entityFactory;
-    private $contactDecorator;
     private $contactHandler;
 
     public function __construct(
         FormFactoryInterface $formFactory,
         FlashBagInterface $flashBag,
         EntityFactory $entityFactory,
-        ContactDecorator $contactDecorator,
         ContactHandler $contactHandler
     ){
         $this->formFactory = $formFactory;
         $this->flashBag = $flashBag;
         $this->entityFactory = $entityFactory;
-        $this->contactDecorator = $contactDecorator;
         $this->contactHandler = $contactHandler;
     }
 
@@ -40,9 +36,9 @@ class ContactFormHandler
             $form->handleRequest($request);
 
             if ($form->isValid()) {
-                $data = $this->contactDecorator->decorate($form);
+                $data = $form->getData();
                 $this->contactHandler->handle($data);
-
+                //TODO check if sending was successfull, add error if not
                 $this->flashBag->add('notice', "form.success");
 
                 return null;

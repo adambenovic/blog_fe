@@ -2,14 +2,10 @@
 
 namespace App\Decorator;
 
-
-use Symfony\Component\Form\FormInterface;
-
 class ContactDecorator
 {
-    public function decorate(FormInterface $form)
+    public function decorate(array $data)
     {
-        $data = $form->getData();
         return [
             'name' => $data['name'],
             'email' => $data['email'],
@@ -17,5 +13,4 @@ class ContactDecorator
             'body' => $data['body']
         ];
     }
-
 }

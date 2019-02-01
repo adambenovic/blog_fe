@@ -21,10 +21,7 @@ class EntityFactory
      */
     public function createBlogPost(): Blog
     {
-        $blog = new Blog();
-        $blog->setAuthor($this->security->getUser());
-
-        return $blog;
+        return new Blog();
     }
 
     public function createComment(): Comment
@@ -37,8 +34,6 @@ class EntityFactory
      */
     public function createContact(): Contact
     {
-        $contact = new Contact();
-
-        return $contact;
+        return new Contact();
     }
 }

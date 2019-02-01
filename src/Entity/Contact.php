@@ -1,5 +1,4 @@
 <?php
-// src/Entity/Contact.php
 
 namespace App\Entity;
 
@@ -67,6 +66,6 @@ class Contact
         $metadata->addPropertyConstraint('subject', new NotBlank());
         $metadata->addPropertyConstraint('subject', new Length(array('max'=> 50)));
 
-        $metadata->addPropertyConstraint('body', new Length(array('min'=> 50)));
+        $metadata->addPropertyConstraint('body', new Length(array('min'=> 10)));
     }
 }

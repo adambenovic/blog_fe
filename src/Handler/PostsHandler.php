@@ -2,7 +2,6 @@
 
 namespace App\Handler;
 
-
 use App\Service\ApiClient;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -39,5 +38,10 @@ class PostsHandler
         $blog = $this->api->get('posts/' . $id);
 
         return $blog;
+    }
+
+    public function getUserPosts()
+    {
+
     }
 }

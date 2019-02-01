@@ -2,7 +2,6 @@
 
 namespace App\Service;
 
-
 use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\ResponseInterface;

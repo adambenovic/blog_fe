@@ -2,14 +2,13 @@
 
 namespace App\Controller;
 
+use Symfony\Component\Routing\Annotation\Route;
 use App\Handler\AddPostFormHandler;
 use App\Handler\CommentFormHandler;
 use App\Handler\CommentsHandler;
 use App\Handler\EditPostFormHandler;
 use App\Handler\PostsHandler;
-use App\Service\DatabaseService;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 
 class BlogController extends Controller
@@ -80,7 +79,7 @@ class BlogController extends Controller
      */
     public function myPosts()
     {
-        $blogs = $this->dbService->loadMyPosts();
+        $blogs = $this->postsHandler->getUserPosts();
 
         return $this->render('blog/myposts.html.twig', [
             'blogs' => $blogs,
@@ -95,7 +94,7 @@ class BlogController extends Controller
      */
     public function editMyPost(Request $request, int $id)
     {
-        $blog = $this->dbService->loadEditPost($id);
+        //TODO Load post for editing
         $form = $this->editPostHandler->handle($request, $blog);
 
         if ($form === null)
@@ -114,7 +113,7 @@ class BlogController extends Controller
      */
     public function deleteMyPost(int $id)
     {
-        $this->dbService->deleteMyPost($id);
+        //TODO Delete post
 
         return $this->redirect('/myposts');
     }

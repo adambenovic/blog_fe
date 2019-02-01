@@ -3,7 +3,6 @@
 namespace App\Handler;
 
 use App\Factory\EntityFactory;
-use App\Repository\BlogRepository;
 use App\Form\BlogPostFormType;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -11,7 +10,6 @@ use Symfony\Component\HttpFoundation\Request;
 class AddPostFormHandler
 {
     private $formFactory;
-    private $blogRepo;
     private $factory;
 
     public function __construct(
@@ -33,7 +31,7 @@ class AddPostFormHandler
 
             if ($form->isValid())
             {
-                $this->blogRepo->saveWpersist($blog);
+                //TODO form handler
                 return null;
             }
         }
