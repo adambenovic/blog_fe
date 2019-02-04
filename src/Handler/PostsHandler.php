@@ -42,6 +42,8 @@ class PostsHandler
 
     public function getUserPosts()
     {
+        $blogs = $this->api->get("/user/" . $_SESSION['user_id']);
 
+        return $blogs;
     }
 }

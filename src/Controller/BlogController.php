@@ -75,7 +75,8 @@ class BlogController extends Controller
 
     /**
      * @Route("/myposts", name="myposts")
-     * @return mixed rendered page
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function myPosts()
     {
